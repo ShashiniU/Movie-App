@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movieapp/authentication/colors.dart';
+import 'package:movieapp/authentication/facebook.dart';
+import 'package:movieapp/authentication/googleLogin.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -25,7 +27,7 @@ class _RegisterPageState extends State<RegisterPage> {
           // Start ------   Signup/Login background(whitespace)--------------------------------------------------------------
 
           Positioned(
-            top: isSignupscreen ? 180 : 180,
+            top: isSignupscreen ? 160 : 160,
             child: Container(
               height: isSignupscreen ? 385 : 330,
               padding: EdgeInsets.all(20),
@@ -113,8 +115,8 @@ class _RegisterPageState extends State<RegisterPage> {
           //----------------------------bottom text---------------------------
           Positioned(
             top: isSignupscreen
-                ? MediaQuery.of(context).size.height - 140
-                : MediaQuery.of(context).size.height - 190,
+                ? MediaQuery.of(context).size.height - 160
+                : MediaQuery.of(context).size.height - 200,
             right: 0,
             left: 0,
             child: Row(
@@ -148,6 +150,23 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
 
           //--------------Social Media ------------------------------------------
+          Positioned(
+            top: isSignupscreen
+                ? MediaQuery.of(context).size.height - 130
+                : MediaQuery.of(context).size.height - 160,
+            right: 85,
+            left: 85,
+            child: Facebook(),
+          ),
+
+          Positioned(
+            top: isSignupscreen
+                ? MediaQuery.of(context).size.height - 80
+                : MediaQuery.of(context).size.height - 110,
+            right: 85,
+            left: 85,
+            child: GoogleLogin(),
+          ),
         ],
       ),
     );

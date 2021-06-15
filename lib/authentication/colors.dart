@@ -11,4 +11,6 @@ class ColorsPage {
   static const Color buttondark = Color(0xFF1A237E); //button dark(shade)
   static const Color buttonlight =
       Colors.indigo; // button light(shade), Login/sinup underline
+  static const Color facebook = Color(0xFF3B5998);
+  static const Color google = Color(0xFFDB4A39);
 }
